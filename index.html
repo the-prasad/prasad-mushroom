@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prasad Mushroom Farm</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f3f3f3;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1615811479324-1b51d65a2acb') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #2f3e46;
+    }
+    .products, .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      background: #2f3e46;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      padding: 10px 20px;
+      background: #2f3e46;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #3f5760;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>N Prasad Mushroom Farm</h1>
+    <p>ताजं मशरूम • प्रशिक्षण • कृषी व्यवसाय सल्ला</p>
+  </header>
+
+  <section>
+    <h2>आमच्याबद्दल</h2>
+    <p style="text-align:center;">
+      आम्ही Prasad Mushroom Farm मध्ये उच्च प्रतीचे मशरूम उत्पादन करतो व प्रशिक्षण, मशरूम शेती मार्गदर्शन, आणि कृषी व्यवसाय सल्ला देतो. नैसर्गिकतेवर आमचा भर आहे.
+    </p>
+  </section>
+
+  <section>
+    <h2>आमची उत्पादने</h2>
+    <div class="products">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1602526432604-f6c0ad4743ce" alt="Fresh Mushroom" />
+        <h3>ताजं मशरूम</h3>
+        <p>100% नैसर्गिक ऑयस्टर मशरूम</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1617265441662-4dbed0e53689" alt="Spawn" />
+        <h3>स्पॉन</h3>
+        <p>प्रमाणित प्रयोगशाळेत तयार केलेले स्पॉन</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1602526432595-0c8164a4b4f1" alt="Powder" />
+        <h3>मशरूम पावडर</h3>
+        <p>प्रतिरक्षा वाढवणारी नैसर्गिक पावडर</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>गॅलरी</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1567027652613-b28557c064df" width="300" style="border-radius:10px;">
+      <img src="https://images.unsplash.com/photo-1602526432581-4e7a14c70164" width="300" style="border-radius:10px;">
+    </div>
+  </section>
+
+  <section>
+    <h2>🌱 मशरूम प्रशिक्षण फॉर्म</h2>
+    <form onsubmit="alert('धन्यवाद! तुमचा फॉर्म सबमिट झाला आहे.'); return false;" style="max-width: 500px; margin: auto;">
+      <label>तुमचं नाव:</label>
+      <input type="text" required>
+
+      <label>मोबाईल नंबर:</label>
+      <input type="tel" required>
+
+      <label>प्रशिक्षणाचा हेतू:</label>
+      <textarea rows="4" required></textarea>
+
+      <button type="submit">सबमिट करा</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>📞 संपर्क</h2>
+    <p style="text-align:center;">
+      📱 WhatsApp/Call: <strong>+91 9876543210</strong><br>
+      📧 Email: <strong>nprasadfarm@example.com</strong><br>
+      📍 Buldana, Maharashtra
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 N Prasad Mushroom Farm. सर्व हक्क राखीव.
+  </footer>
+
+  <!-- WhatsApp Chat Button -->
+  <a href="https://wa.me/919545249660" target="_blank" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;">
+    📱 WhatsApp Us
+  </a>
+
+</body>
+</html>
