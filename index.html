@@ -2,82 +2,109 @@
 <html lang="mr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prasad Mushroom Farm</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
     body {
       font-family: 'Baloo 2', cursive;
-      margin: 0;
-      padding: 0;
-      background: #f0f4f8;
-      color: #333;
+      background: #f4f8fb;
+      color: #2c3e50;
+      line-height: 1.6;
     }
     header {
-      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.6)), 
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
                   url('https://images.unsplash.com/photo-1615811479324-1b51d65a2acb') center/cover no-repeat;
       color: white;
+      padding: 120px 20px 100px;
       text-align: center;
-      padding: 100px 20px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0;}
+      100% {opacity: 1;}
     }
     header h1 {
-      font-size: 3.5rem;
-      margin: 0;
+      font-size: 4rem;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     }
     header p {
-      font-size: 1.5rem;
-      margin-top: 15px;
+      font-size: 1.6rem;
+      color: #fffae3;
     }
+
     section {
       padding: 60px 20px;
       max-width: 1100px;
       margin: auto;
     }
+
     h2 {
       text-align: center;
-      color: #2f3e46;
-      font-size: 2.2rem;
-      margin-bottom: 30px;
+      font-size: 2.5rem;
+      margin-bottom: 35px;
+      color: #1b2e35;
+      position: relative;
     }
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #27ae60;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
     .products, .gallery {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
     }
+
     .card {
       background: white;
       border-radius: 16px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
       padding: 25px;
-      width: 280px;
+      width: 290px;
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transform: translateY(-10px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.2);
     }
     .card img {
       max-width: 100%;
       border-radius: 12px;
       margin-bottom: 15px;
     }
+
     .gallery img {
+      width: 300px;
       border-radius: 12px;
       transition: transform 0.3s ease;
     }
     .gallery img:hover {
-      transform: scale(1.05);
+      transform: scale(1.07);
     }
+
     form {
       background: white;
-      padding: 30px;
+      padding: 35px;
       border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      max-width: 550px;
+      margin: auto;
     }
     form input, form textarea {
       width: 100%;
@@ -89,30 +116,33 @@
     }
     form button {
       padding: 12px 25px;
-      background: #2f3e46;
+      background: #27ae60;
       color: white;
       border: none;
       border-radius: 6px;
-      font-size: 1rem;
+      font-size: 1.1rem;
       cursor: pointer;
       transition: background 0.3s ease;
     }
     form button:hover {
-      background: #3f5760;
+      background: #219150;
     }
+
+    .contact p {
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.9;
+    }
+
     footer {
-      background: #2f3e46;
+      background: #1b2e35;
       color: white;
       text-align: center;
       padding: 25px;
       font-size: 1rem;
+      letter-spacing: 1px;
     }
-    .contact p {
-      text-align: center;
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-    /* WhatsApp Floating Button */
+
     .whatsapp-btn {
       position: fixed;
       bottom: 20px;
@@ -130,12 +160,16 @@
       align-items: center;
       gap: 8px;
     }
+
     @media (max-width: 600px) {
       header h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
       }
       header p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+      }
+      .gallery img {
+        width: 100%;
       }
     }
   </style>
@@ -178,14 +212,14 @@
   <section>
     <h2>गॅलरी</h2>
     <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1567027652613-b28557c064df" width="300">
-      <img src="https://images.unsplash.com/photo-1602526432581-4e7a14c70164" width="300">
+      <img src="https://images.unsplash.com/photo-1567027652613-b28557c064df" alt="Gallery 1">
+      <img src="https://images.unsplash.com/photo-1602526432581-4e7a14c70164" alt="Gallery 2">
     </div>
   </section>
 
   <section>
     <h2>🌱 मशरूम प्रशिक्षण फॉर्म</h2>
-    <form onsubmit="alert('धन्यवाद! तुमचा फॉर्म सबमिट झाला आहे.'); return false;" style="max-width: 550px; margin: auto;">
+    <form onsubmit="alert('धन्यवाद! तुमचा फॉर्म सबमिट झाला आहे.'); return false;">
       <label>तुमचं नाव:</label>
       <input type="text" required>
 
@@ -212,7 +246,6 @@
     &copy; 2025 Prasad Mushroom Farm. सर्व हक्क राखीव.
   </footer>
 
-  <!-- WhatsApp Chat Button -->
   <a href="https://wa.me/919545249660" target="_blank" class="whatsapp-btn">
     📱 WhatsApp Us
   </a>
