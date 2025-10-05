@@ -6,59 +6,49 @@
   <title>Prasad Mushroom Farm</title>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Baloo 2', cursive; background: #f4f8fb; color: #2c3e50; line-height: 1.6; }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family: 'Baloo 2', cursive; background:#f4f8fb; color:#2c3e50; line-height:1.6; }
 
     /* Header */
     header {
       background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
                   url('https://i.pinimg.com/736x/72/78/6f/72786f8acd5ca5060142969e83f66364.jpg') center/cover no-repeat;
-      color: white; padding: 140px 20px 100px; text-align: center; position: relative; overflow: hidden;
+      color:white; padding:140px 20px 100px; text-align:center; position:relative;
     }
-    header::after {
-      content: ''; position: absolute; top:0; left:0; width:100%; height:100%;
-      background: rgba(0,0,0,0.3);
-    }
-    header h1 { font-size: 4rem; letter-spacing: 2px; margin-bottom: 15px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); position: relative; z-index:1; animation: fadeDown 1s ease forwards; }
-    header p { font-size: 1.6rem; color: #fffae3; position: relative; z-index:1; animation: fadeUp 1s ease forwards; }
-    header button { padding: 14px 28px; margin-top: 20px; font-size:1.2rem; border:none; border-radius:8px; cursor:pointer; background: #27ae60; color:white; transition:0.3s; position: relative; z-index:1; }
-    header button:hover { background: #219150; }
+    header h1 { font-size:4rem; margin-bottom:15px; text-shadow:2px 2px 10px rgba(0,0,0,0.5); }
+    header p { font-size:1.6rem; color:#fffae3; margin-bottom:25px; }
+    header button { padding:14px 28px; font-size:1.2rem; border:none; border-radius:8px; cursor:pointer; background:#27ae60; color:white; transition:0.3s; }
+    header button:hover { background:#219150; }
 
-    @keyframes fadeDown { 0%{opacity:0; transform:translateY(-40px);} 100%{opacity:1; transform:translateY(0);} }
-    @keyframes fadeUp { 0%{opacity:0; transform:translateY(40px);} 100%{opacity:1; transform:translateY(0);} }
+    /* Sections */
+    section { padding:60px 20px; max-width:1100px; margin:auto; }
 
-    section { padding: 60px 20px; max-width: 1100px; margin:auto; }
-
-    h2 {
-      text-align: center; font-size: 2.8rem; margin-bottom: 40px; color: #1b2e35; position: relative;
-    }
-    h2::after { content: ''; display:block; width:70px; height:4px; background:#27ae60; margin:10px auto 0; border-radius:2px; }
+    h2 { text-align:center; font-size:2.8rem; margin-bottom:40px; color:#1b2e35; position:relative; }
+    h2::after { content:''; display:block; width:70px; height:4px; background:#27ae60; margin:10px auto 0; border-radius:2px; }
 
     /* Products */
-    .products, .gallery { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
-    .card {
-      background:white; border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,0.12); padding:25px; width:280px; text-align:center; transition:0.3s; cursor:pointer;
-    }
+    .products { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; }
+    .card { background:white; border-radius:20px; box-shadow:0 10px 25px rgba(0,0,0,0.12); padding:25px; width:280px; text-align:center; transition:0.3s; cursor:pointer; }
     .card:hover { transform:translateY(-10px); box-shadow:0 15px 30px rgba(0,0,0,0.2); }
-    .card img { max-width:100%; border-radius:12px; margin-bottom:15px; transition:0.3s; }
+    .card img { max-width:100%; border-radius:12px; margin-bottom:15px; }
     .card h3 { font-size:1.4rem; margin-bottom:10px; color:#e53935; }
     .card p { font-size:1rem; color:#2c3e50; }
 
     /* Gallery */
+    .gallery { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
     .gallery img { width:300px; border-radius:12px; transition: transform 0.3s ease; }
-    .gallery img:hover { transform: scale(1.07); }
+    .gallery img:hover { transform:scale(1.07); }
 
-    /* Accordion Packages */
-    #packages { font-family: 'Poppins', sans-serif; background:#fff8f5; border-radius:20px; box-shadow:0 5px 30px rgba(0,0,0,0.1); padding:50px; }
+    /* Packages Accordion */
+    #packages { font-family:'Poppins', sans-serif; background:#fff8f5; border-radius:20px; box-shadow:0 5px 30px rgba(0,0,0,0.1); padding:50px; }
     .accordion-item { margin-bottom:15px; border-radius:10px; overflow:hidden; }
     .accordion-item button {
-      width:100%; padding:20px; font-size:1.1rem; border:none; text-align:left; transition:0.3s; cursor:pointer; color:white;
-      border-radius:10px;
+      width:100%; padding:20px; font-size:1.1rem; border:none; text-align:left; transition:0.3s; cursor:pointer; color:white; border-radius:10px;
     }
-    #accordion1 button { background: #e53935; }
-    #accordion2 button { background: #f57c00; }
-    #accordion3 button { background: #43a047; }
-    #accordion4 button { background: #1e88e5; }
+    #accordion1 button { background:#e53935; }
+    #accordion2 button { background:#f57c00; }
+    #accordion3 button { background:#43a047; }
+    #accordion4 button { background:#1e88e5; }
     .accordion-content { display:none; padding:20px; border-radius:0 0 10px 10px; background:#fff; border-top:none; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
 
     /* Form */
@@ -76,15 +66,11 @@
 
     /* WhatsApp Button */
     .whatsapp-btn {
-      position: fixed; bottom:20px; right:20px; background:#25D366; color:white;
+      position:fixed; bottom:20px; right:20px; background:#25D366; color:white;
       padding:14px 22px; border-radius:50px; font-weight:bold; text-decoration:none; box-shadow:0 5px 15px rgba(0,0,0,0.3);
       z-index:1000; font-size:1rem; display:flex; align-items:center; gap:8px; animation:pulse 1.5s infinite;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
+    @keyframes pulse { 0%{transform:scale(1);}50%{transform:scale(1.05);}100%{transform:scale(1);} }
 
     /* Responsive */
     @media (max-width:768px) { .products, .gallery { flex-direction:column; align-items:center; } header h1 { font-size:3rem; } header p { font-size:1.3rem; } }
@@ -92,54 +78,140 @@
 </head>
 <body>
 
-  <header>
-    <h1>Prasad Mushroom Farm</h1>
-    <p>ताजं मशरूम • प्रशिक्षण • कृषी व्यवसाय सल्ला</p>
-    <button onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'});">Training Packages</button>
-  </header>
+<header>
+  <h1>Prasad Mushroom Farm</h1>
+  <p>ताजं मशरूम • प्रशिक्षण • कृषी व्यवसाय सल्ला</p>
+  <button onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'});">Training Packages</button>
+</header>
 
-  <section>
-    <h2>आमच्याबद्दल</h2>
-    <p style="text-align:center; font-size:1.2rem;">
-      आम्ही Prasad Mushroom Farm मध्ये उच्च प्रतीचे मशरूम उत्पादन करतो व प्रशिक्षण, मशरूम शेती मार्गदर्शन, आणि कृषी व्यवसाय सल्ला देतो. नैसर्गिकतेवर आमचा भर आहे.
-    </p>
-  </section>
+<section>
+  <h2>आमच्याबद्दल</h2>
+  <p style="text-align:center; font-size:1.2rem;">
+    आम्ही Prasad Mushroom Farm मध्ये उच्च प्रतीचे मशरूम उत्पादन करतो व प्रशिक्षण, मशरूम शेती मार्गदर्शन, आणि कृषी व्यवसाय सल्ला देतो. नैसर्गिकतेवर आमचा भर आहे.
+  </p>
+</section>
 
-  <section>
-    <h2>आमची उत्पादने</h2>
-    <div class="products">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1602526432604-f6c0ad4743ce" alt="Fresh Mushroom">
-        <h3>ताजं मशरूम</h3>
-        <p>100% नैसर्गिक ऑयस्टर मशरूम</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1617265441662-4dbed0e53689" alt="Spawn">
-        <h3>स्पॉन</h3>
-        <p>प्रमाणित प्रयोगशाळेत तयार केलेले स्पॉन</p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1602526432595-0c8164a4b4f1" alt="Powder">
-        <h3>मशरूम पावडर</h3>
-        <p>प्रतिरक्षा वाढवणारी नैसर्गिक पावडर</p>
+<section>
+  <h2>आमची उत्पादने</h2>
+  <div class="products">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1602526432604-f6c0ad4743ce" alt="Fresh Mushroom">
+      <h3>ताजं मशरूम</h3>
+      <p>100% नैसर्गिक ऑयस्टर मशरूम</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1617265441662-4dbed0e53689" alt="Spawn">
+      <h3>स्पॉन</h3>
+      <p>प्रमाणित प्रयोगशाळेत तयार केलेले स्पॉन</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1602526432595-0c8164a4b4f1" alt="Powder">
+      <h3>मशरूम पावडर</h3>
+      <p>प्रतिरक्षा वाढवणारी नैसर्गिक पावडर</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>गॅलरी</h2>
+  <div class="gallery">
+    <img src="https://images.unsplash.com/photo-1567027652613-b28557c064df" alt="Gallery 1">
+    <img src="https://images.unsplash.com/photo-1602526432581-4e7a14c70164" alt="Gallery 2">
+  </div>
+</section>
+
+<!-- Packages Accordion -->
+<section id="packages">
+  <h2>💼 व्यवसाय प्रशिक्षण पॅकेजेस</h2>
+  <div class="accordion">
+    <!-- Package 1 -->
+    <div class="accordion-item">
+      <button onclick="toggleAccordion(1)">💼 पॅकेज 1: बेसिक ट्रेनिंग – ₹499</button>
+      <div id="accordion1" class="accordion-content">
+        <p>🔹 <strong>मशरूम शेती मूलभूत प्रशिक्षण</strong> – Beginners साठी step-by-step guide</p>
+        <p>🔹 Basic cultivation knowledge: Oyster, Button mushrooms</p>
+        <p>🔹 Seed / Spawn selection, Bed preparation, Basic hygiene</p>
+        <p>🔹 WhatsApp/Call guidance (Weekly Q&A)</p>
+        <p>🔹 Starter PDF guide with images & illustrations</p>
+        <p>🔹 Learning Outcome: स्वतःच्या छोटे setup सुरू करण्याची confidence</p>
       </div>
     </div>
-  </section>
 
-  <section>
-    <h2>गॅलरी</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1567027652613-b28557c064df" alt="Gallery 1">
-      <img src="https://images.unsplash.com/photo-1602526432581-4e7a14c70164" alt="Gallery 2">
+    <!-- Package 2 -->
+    <div class="accordion-item">
+      <button onclick="toggleAccordion(2)">🧑‍🌾 पॅकेज 2: Advanced Training + Consultation – ₹1499</button>
+      <div id="accordion2" class="accordion-content">
+        <p>🔹 Advanced cultivation techniques: Oyster, Shiitake, Lion’s Mane</p>
+        <p>🔹 Setup design, Material sourcing, Cost-effective methods</p>
+        <p>🔹 Bed preparation, Temperature & Humidity control, Contamination management</p>
+        <p>🔹 1-on-1 call consultation (30 mins) + WhatsApp group support</p>
+        <p>🔹 Certificate of Completion (PDF)</p>
+        <p>🔹 Bonus: Marketing tips for small-scale sales (local markets/online)</p>
+      </div>
     </div>
-  </section>
 
-  <!-- Packages Accordion -->
-  <section id="packages">
-    <h2>💼 व्यवसाय प्रशिक्षण पॅकेजेस</h2>
-    <div class="accordion">
+    <!-- Package 3 -->
+    <div class="accordion-item">
+      <button onclick="toggleAccordion(3)">🚀 पॅकेज 3: Full Mushroom Business Mentorship – ₹2999</button>
+      <div id="accordion3" class="accordion-content">
+        <p>🔹 Step-by-step business guidance – Setup to Sales</p>
+        <p>🔹 Project-wise cost-profit analysis (1 month, 3 month, 6 month)</p>
+        <p>🔹 Branding, Packaging & Marketing strategies</p>
+        <p>🔹 By-products creation: Powder, Pickle, Supplement</p>
+        <p>🔹 Live video sessions + weekly follow-up (1 month)</p>
+        <p>🔹 PDF + Certificate</p>
+      </div>
+    </div>
 
-      <div class="accordion-item">
-        <button onclick="toggleAccordion(1)">💼 पॅकेज 1: बेसिक ट्रेनिंग – ₹299</button>
-        <div id="accordion1" class="accordion-content">
-          <p>🔹 <strong>मशरूम शेतीचे मूलभूत ज्ञान</strong> – सुरुवात करणाऱ्यांसाठी
+    <!-- Package 4 -->
+    <div class="accordion-item">
+      <button onclick="toggleAccordion(4)">🧳 पॅकेज 4: On-Site Premium Consultancy – ₹4999–₹9999 + Travel</button>
+      <div id="accordion4" class="accordion-content">
+        <p>🔹 On-site practical training & inspection – Hands-on guidance</p>
+        <p>🔹 Bed preparation, Hygiene, Fruiting & Harvesting demonstration</p>
+        <p>🔹 Local material sourcing guidance & cost optimization</p>
+        <p>🔹 Setup layout, temperature & humidity monitoring, yield maximization</p>
+        <p>🔹 Marketing & Resale strategy + Social media branding tips</p>
+        <p>🔹 PDF + Certificate</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>🌱 मशरूम प्रशिक्षण फॉर्म</h2>
+  <form onsubmit="alert('धन्यवाद! तुमचा फॉर्म सबमिट झाला आहे.'); return false;">
+    <label>तुमचं नाव:</label>
+    <input type="text" required>
+    <label>मोबाईल नंबर:</label>
+    <input type="tel" required>
+    <label>प्रशिक्षणाचा हेतू:</label>
+    <textarea rows="4" required></textarea>
+    <button type="submit">सबमिट करा</button>
+  </form>
+</section>
+
+<section class="contact">
+  <h2>📞 संपर्क</h2>
+  <p>
+    📱 WhatsApp/Call: <strong>+91 9545249660</strong><br>
+    📧 Email: <strong>prasadfarm@gmail.com</strong><br>
+    📍 Buldana, Maharashtra
+  </p>
+</section>
+
+<footer>
+  &copy; 2025 Prasad Mushroom Farm. सर्व हक्क राखीव.
+</footer>
+
+<a href="https://wa.me/919545249660" target="_blank" class="whatsapp-btn">📱 WhatsApp Us</a>
+
+<script>
+  function toggleAccordion(id) {
+    var content = document.getElementById("accordion" + id);
+    content.style.display = (content.style.display === "block") ? "none" : "block";
+  }
+</script>
+
+</body>
+</html>
